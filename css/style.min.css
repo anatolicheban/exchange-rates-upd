@@ -1,0 +1,270 @@
+@import"https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic";
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit
+}
+
+ul[class],
+ol[class] {
+  padding: 0
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0
+}
+
+ul[class] {
+  list-style: none
+}
+
+img {
+  max-width: 100%;
+  display: block
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit
+}
+
+a {
+  text-decoration: none
+}
+
+button {
+  padding: 0
+}
+
+html,
+body {
+  height: 100%
+}
+
+html body,
+body body {
+  font-family: "Roboto", serif
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%
+}
+
+.main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto
+}
+
+.footer {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
+.container-fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.app {
+  padding: 10px;
+  border: 1px solid rgba(51, 51, 51, .3);
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%
+}
+
+.app__output {
+  border: 1px solid rgba(51, 51, 51, .3);
+  padding: 5px;
+  font-weight: 500;
+  font-size: 70px;
+  position: relative;
+  border-radius: 8px;
+  margin-bottom: 15px
+}
+
+.app__output::after {
+  position: absolute;
+  content: attr(data-day);
+  top: 10px;
+  font-size: 15px;
+  opacity: .5;
+  right: 10px
+}
+
+.app__input {
+  border: 1px solid rgba(51, 51, 51, .3);
+  padding: 5px;
+  border-radius: 8px
+}
+
+.app__input-field {
+  padding: 0 5px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: right;
+  border: 1px solid rgba(51, 51, 51, .3);
+  position: relative
+}
+
+.app__input-text {
+  font-size: 14px;
+  color: #333;
+  text-align: right;
+  margin-bottom: 5px
+}
+
+.app__input-buttons {
+  display: -ms-grid;
+  display: grid;
+  gap: 7px;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr)
+}
+
+.button {
+  background-color: #ff5e2b;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 400;
+  cursor: pointer
+}
+
+.button:hover {
+  background-color: #cc4a23
+}
+
+.button:disabled {
+  background-color: #ff9778;
+  cursor: default
+}
+
+.reset {
+  -ms-grid-column-span: 2;
+  grid-column: 2 span
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.error {
+  max-width: 500px;
+  padding: 50px;
+  background-color: #ff5e4a;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 8px
+}
+
+.selects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 5px
+}
+
+.select {
+  width: 49%;
+  height: 40px;
+  font-size: 15px
+}
+
+.active {
+  background-color: #cc4a23
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  background: #0a377e;
+  margin: 0
+}

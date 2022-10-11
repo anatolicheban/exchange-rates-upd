@@ -1,0 +1,117 @@
+@import 'vars'
+@import 'fonts'
+@import 'reset'
+@import 'libs'
+@import 'global'
+
+.main
+  width: 100vw
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+.app
+  padding: 10px
+  border: 1px solid rgba(#333, .3)
+  border-radius: 8px
+  max-width: 500px
+  width: 100%
+  &__output
+    border: 1px solid rgba(#333, .3)
+    padding: 5px
+    font-weight: 500
+    font-size: 70px
+    position: relative
+    border-radius: 8px
+    margin-bottom: 15px
+    &::after
+      position: absolute
+      content: attr(data-day)
+      top: 10px
+      font-size: 15px
+      opacity: .5
+      right: 10px
+  &__input
+    border: 1px solid rgba(#333, .3)
+    padding: 5px
+    border-radius: 8px
+  &__input-field
+    padding: 0 5px
+    width: 100%
+    border-radius: 5px
+    outline: none
+    margin-bottom: 5px
+    font-weight: 400
+    font-size: 30px
+    text-align: right
+    border: 1px solid rgba(#333, .3)
+    position: relative
+  &__input-text
+    font-size: 14px
+    color: #333
+    text-align: right
+    margin-bottom: 5px
+  &__input-buttons
+    display: grid
+    gap: 7px
+    grid-template-columns: repeat(3, 1fr)
+.button
+  background-color: #FF5E2B
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 5px
+  border: none
+  color: #fff
+  font-size: 23px
+  font-weight: 400
+  cursor: pointer
+  &:hover
+    background-color: #CC4A23
+  &:disabled
+    background-color: #FF9778
+    cursor: default
+
+.reset
+  grid-column: 2 span
+
+.backdrop
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(#fff, .7)
+  display: flex
+  align-items: center
+  justify-content: center
+
+.error
+  max-width: 500px
+  padding: 50px
+  background-color: #ff5e4a
+  text-align: center
+  font-size: 20px
+  border-radius: 8px
+
+.selects
+  display: flex
+  justify-content: space-between
+  margin-bottom: 5px
+
+.select
+  width: 49%
+  height: 40px
+  font-size: 15px
+
+.active
+  background-color: #CC4A23
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  -moz-appearance: textfield
+  background: #0a377e
+  margin: 0
